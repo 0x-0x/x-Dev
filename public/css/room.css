@@ -1,0 +1,145 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --violet: #5e17eb;
+  --black: #0e0e0e;
+}
+
+.customb1 {
+  border: var(--violet);
+  color: #0e0e0e;
+  border: #0e0e0e;
+  border: 0.1px solid #5e17eb;
+  border-radius: 0%;
+}
+
+.customb2 {
+  background-color: var(--violet);
+  border: var(--white);
+  border: 0.1px solid #5e17eb;
+  border-radius: 0%;
+  color: #fff;
+}
+
+.customb2:hover {
+  opacity: 4.5;
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+.customb1:hover {
+  opacity: 4.5;
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+.get-s {
+  padding: 10px 20px 10px 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-container {
+  height: 100vh;
+  align-content: center;
+  margin-top: 10%;
+  border-bottom: 0.5px solid #000;
+}
+
+.border {
+  border-bottom: 50px solid #000;
+}
+.navbar {
+  box-shadow: -1px 5px 14px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -1px 5px 14px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 5px 14px 2px rgba(0, 0, 0, 0.15);
+}
+
+.my-title-custom {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 5%;
+}
+
+.footer {
+  background-color: #0e0e0e;
+  padding-top: 40px;
+  margin-top: 30px;
+}
+
+.ending-text {
+  color: #ffffff;
+}
+
+.footer ul li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #d1c4ea;
+}
+
+.search-icon {
+  position: relative;
+  left: -40px;
+}
+
+.custom-card {
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10%;
+  background-color: #f1f1f1;
+}
+
+.custom-card:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.canvas {
+  border: 0.5px solid #000;
+  padding: 10px;
+}
+
+.hero-text {
+  padding-left: 500px;
+  font-size: 24px;
+  font-family: monospace;
+  color: #ffffff;
+}
+
+#video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: 250px;
+  margin: 10px 20px 10px 20px;
+  display: none;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+  margin: 10px 20px 10px 20px;
+  border-radius: 50px;
+  -webkit-box-shadow: 24px 14px 30px 0px rgba(155, 155, 155, 0.07);
+  -moz-box-shadow: 24px 14px 30px 0px rgba(148, 148, 148, 0.07);
+  box-shadow: 24px 14px 30px 0px rgba(180, 179, 179, 0.07);
+}
+
+.video:hover {
+  border: 0.5px solid #000;
+}
+
+body {
+  background-color: #000;
+}

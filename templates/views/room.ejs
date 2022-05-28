@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/5587518f25.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="/js/socket.io.js" defer></script>
+  <script src="/js/room.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <title>x-Teach</title>
+  <link rel="stylesheet" href="/css/room.css" />
+  <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="/images/logo_small.svg" alt="">
+    </a>
+    <h3 style="color: white;">X-dev</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <h2 class="hero-text">Start Drawing ✒️</h2>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <button class="create-room customb2 get-s" onclick=erasertoggleon()>Eraser</button>
+        <button class="create-room customb1 get-s" onclick=erasertoggleoff()>Pen</button>
+        <!-- <button class="btn my-2 my-sm-0 mr-2 custom-button customb2" type="submit">Sign up</button> -->
+    </div>
+    </div>
+  </nav>
+    
+    <div class="form-inline my-2 my-lg-0">
+    </div>
+    <br>
+    <canvas id="canvas"></canvas>
+    <div id="video-grid"></div>
+    <center>
+      <button class="clipboard btn btn-light" type="button" >Share URL</button>
+      <p style="color: white;"></p>
+    </center>
+     
+    <script>
+      var $temp = $("<input>");
+var $url = $(location).attr('href');
+
+$('.clipboard').on('click', function() {
+  $("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $("p").text("URL copied!");
+})
+
+        const ROOMID = "<%=roomId%>";
+        const USERID = "<%=userId%>";
+        var eraser;
+        function erasertoggleon()
+        {
+          eraser = true;
+        }
+
+        function erasertoggleoff()
+        {
+          eraser = false;
+        }
+    </script>
+</body>
+</html>
