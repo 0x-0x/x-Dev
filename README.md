@@ -85,3 +85,4 @@ Please adhere to this project's `code of conduct`.
 
 Don't hesitate to add a issue if you found a bug.
 
+The project is no longer maintained
